@@ -158,7 +158,7 @@ USER=DefDef
 [ -e /etc/os-release ] && source /etc/os-release
 
 # CentOS 7 and Oracle Linux 7.5
-elif [ "$ID $VERSION_ID" = "ol 7.5" -o "$ID $VERSION_ID" = "centos 7" ]; then
+if [ "$ID $VERSION_ID" = "ol 7.5" -o "$ID $VERSION_ID" = "centos 7" ]; then
 
 	DANTE_TGZ="tgz-prod.dante-1.4.2-rhel72-amd64-64bit-gcc.tar.gz"
 	curl --progress-bar -O https://www.inet.no/dante/sslfiles/dante-1.4.2/"$DANTE_TGZ"
